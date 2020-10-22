@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="bootstrap-4.5.2-dist/css/bootstrap.min.css">
+        <link rel="stylesheet" href="all.min.css">
+        <link rel="stylesheet" href="CRUD-STYLE.css">
+    </head>
+</html>
+<body>
+        
+    <h1 class="shadow text-center  rounded text-black-50 my-2 badge-light ">CRUD SYSTEM</h1>
+    <h2 class="text-center py-2 text-white shadow bg-danger w-25 m-auto rounded ">Our Products</h2>
+<div class="container py-3 rounded ">
+    <div class="container py-5 bg-light rounded shadow ">
+    <div class="form-group ">
+        <lable>Product Name: </lable>
+        <input type="text" class="form-control " id="productNameInput">
+
+        <div class="alert alert-danger mt-2 text-danger d-none" id="productNameAlert">
+            Product Name must be required and start with upperCase Then from 3 and 6  LowerCase characters  
+        </div>
+    </div>
+    <div class="form-group">
+        <lable>Product Price: </lable>
+        <input type="text" class="form-control" id="productPriceInput">
+    </div>
+    <div class="alert alert-danger mt-2 text-danger d-none" id="productPriceAlert">
+        Product Price must be required and start with 100 to 10000
+    </div>
+    <div class="form-group">
+        <lable>Product Category: </lable>
+        <input type="text" class="form-control" id="productCategoryInput">
+        <div class="alert alert-danger mt-2 text-danger d-none" id="productCatAlert">
+            Product Category must be required start with upperCase , don't have special characters and numbers <small>(Maximum char is 10)</small>
+        </div>
+    </div>
+    <div class="form-group">
+        <lable>Product Description: </lable>
+       <textarea type="text" class="form-control" id="productDescInput"></textarea>
+    </div>
+    <button onclick="addProduct()" class="btn btn-primary" id="addBtn" >Add Product</button>
+    <button class="btn btn-warning" id="updateBtn" onclick="saveUpdates()">Save Updates</button>
+</div>
+
+      <div class="container pt-5">
+          <input onkeyup="searchProducts()" type="search" id="searchInput" class="form-control w-50 m-auto " placeholder="Search...">
+      </div>
+
+
+<div class="container py-3 ">
+
+    <table class="table w-75 m-auto py-5 bg-light rounded shadow ">
+        <thead>
+            <th>Index</th>
+            <th>ProductName</th>
+            <th>ProductPrice</th>
+            <th>ProductCategory</th>
+            <th>ProductDiscription</th>
+            <th class="text-warning">Update</th>
+            <th class="text-danger">Delete</th>
+        </thead>
+        <tbody id="tableBody">
+            
+
+           
+        </tbody>
+    </table>
+
+    
+</div>
+
+
+
+    <script src="jquery-3.5.1.slim.min.js"></script>
+    <script src="popper.min.js"></script>
+    <script src="bootstrap-4.5.2-dist/js/bootstrap.min.js"></script>
+    <script src="CRUD-JS.js"></script>
+</body>

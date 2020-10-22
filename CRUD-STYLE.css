@@ -1,0 +1,15 @@
+body{
+    font-family: 'segoe ui light';
+    background-color:gainsboro;
+   position: relative;
+}
+
+#updateBtn {
+    display: none;
+}
+h1{
+    font-size: 4rem;
+}
+.container , .table , #searchInput{
+    border-radius: 2rem !important;
+}
